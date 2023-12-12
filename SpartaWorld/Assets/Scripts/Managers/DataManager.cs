@@ -7,8 +7,12 @@ using UnityEngine;
 
 public class DataManager {
 
-    public void Initialize() {
+    public Dictionary<string, CharacterData> Characters = new();
+    public Dictionary<int, LevelData> Levels = new();
 
+    public void Initialize() {
+        Characters = LoadJson<CharacterDataLoader, string, CharacterData>("CharacterData").MakeDictionary();
+        Levels = LoadJson<LevelDataLoader, int, LevelData>("LevelData").MakeDictionary();
     }
 
 
