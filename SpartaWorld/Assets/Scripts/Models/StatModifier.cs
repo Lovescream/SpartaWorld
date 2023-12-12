@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class StatModifier {
 
+    public StatType Stat { get; private set; }
     public StatModifierType Type { get; private set; }
     public float Value { get; private set; }
 
     
-    public StatModifier(StatModifierType type, float value) {
+    public StatModifier(StatType stat, StatModifierType type, float value) {
+        Stat = stat;
         Type = type;
         Value = value;
     }

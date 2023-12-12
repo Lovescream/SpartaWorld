@@ -27,7 +27,10 @@ public class Player : MonoBehaviour {
             OnPlayerDataUpdated?.Invoke();
         }
     }
-    public float RequiredExp;
+    public float RequiredExp { get; private set; }
+
+    public Status Status { get; private set; } = new();
+
     private float _exp;
 
     public event Action OnPlayerDataUpdated;
