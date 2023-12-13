@@ -52,6 +52,10 @@ public class Player {
         Level = 1;
         Exp = 10;
         Status = new();
+        Status[StatType.Hp].SetValue(data.hp);
+        Status[StatType.Damage].SetValue(data.damage);
+        Status[StatType.Defense].SetValue(data.defense);
+        Status[StatType.Critical].SetValue(data.critical);
         Inventory = new();
     }
 }

@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,9 @@ public class UI_MainScene : UI_Scene {
         txtLevel,
         txtExp,
         txtDescription,
+        txtStatus,
+        txtInventory,
+        txtShop,
     }
     enum Images {
         imgCharacter
@@ -79,10 +83,31 @@ public class UI_MainScene : UI_Scene {
         GetText((int)Texts.txtDescription).text = _player.ClassDescription;
     }
 
+    public void ShowButtons() {
+        GetButton((int)Buttons.btnStatus).gameObject.SetActive(true);
+        GetButton((int)Buttons.btnInventory).gameObject.SetActive(true);
+        GetButton((int)Buttons.btnShop).gameObject.SetActive(true);
+        GetButton((int)Buttons.btnStatus).image.DOFade(1, 0.25f);
+        GetText((int)Texts.txtStatus).DOFade(1, 0.25f);
+        GetButton((int)Buttons.btnInventory).image.DOFade(1, 0.25f);
+        GetText((int)Texts.txtInventory).DOFade(1, 0.25f);
+        GetButton((int)Buttons.btnShop).image.DOFade(1, 0.25f);
+        GetText((int)Texts.txtShop).DOFade(1, 0.25f);
+    }
+    public void HideButtons() {
+        GetButton((int)Buttons.btnStatus).image.DOFade(0, 0.25f).OnComplete(() => GetButton((int)Buttons.btnStatus).gameObject.SetActive(false));
+        GetText((int)Texts.txtStatus).DOFade(0, 0.25f);
+        GetButton((int)Buttons.btnInventory).image.DOFade(0, 0.25f).OnComplete(() => GetButton((int)Buttons.btnInventory).gameObject.SetActive(false));
+        GetText((int)Texts.txtInventory).DOFade(0, 0.25f);
+        GetButton((int)Buttons.btnShop).image.DOFade(0, 0.25f).OnComplete(() => GetButton((int)Buttons.btnShop).gameObject.SetActive(false));
+        GetText((int)Texts.txtShop).DOFade(0, 0.25f);
+    }
+
     #region OnButtons
 
     private void OnBtnStatus() {
-
+        Main.UI.ShowDrawer<UI_Drawer_Status>();
+        HideButtons();
     }
     private void OnBtnInventory() { 
 

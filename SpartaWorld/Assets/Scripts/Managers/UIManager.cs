@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -29,6 +30,7 @@ public class UIManager {
     private UI_Scene sceneUI;
 
     private Stack<UI_Popup> popups = new();
+    private List<UI_Drawer> drawers = new();
 
     // events.
     public event Action<int> OnTimeScaleChanged;
@@ -71,12 +73,49 @@ public class UIManager {
 
     #endregion
 
-    #region Popup
+    #region Drawer
 
+    public T ShowDrawer<T>(string name = null) where T : UI_Drawer {
+        if (string.IsNullOrEmpty(name)) name = typeof(T).Name;
+        GameObject obj = Main.Resource.Instantiate($"{name}.prefab");
+        obj.transform.SetParent(Root.transform);
+        T drawer = obj.GetOrAddComponent<T>();
+        drawers.Add(drawer);
+
+        RectTransform rect = obj.transform.GetChild(0).GetComponent<RectTransform>();
+        float originX = rect.anchoredPosition.x;
+        rect.DOAnchorPosX(1500, 0);
+        rect.DOAnchorPosX(originX, 0.5f);
+
+        return drawer;
+    }
+
+    public void CloseDrawer(UI_Drawer drawer) {
+        if (drawers.Count == 0) return;
+        if (drawers[drawers.Count - 1] != drawer) {
+            Debug.LogError($"[UIManager] CloseDrawer({drawer.name}): Close drawer failed.");
+            return;
+        }
+        CloseDrawer();
+    }
+    public void CloseDrawer() {
+        if (drawers.Count == 0) return;
+        UI_Drawer drawer = drawers[drawers.Count - 1];
+        RectTransform rect = drawer.transform.GetChild(0).GetComponent<RectTransform>();
+        rect.DOAnchorPosX(1500, 0.5f).OnComplete(() => {
+            Main.Resource.Destroy(drawer.gameObject);
+            order--;
+        });
+    }
+
+    #endregion
+
+    #region Popup
+    
     public T ShowPopupUI<T>(string name = null) where T : UI_Popup {
         if (string.IsNullOrEmpty(name)) name = typeof(T).Name;
 
-        GameObject obj = Main.Resource.Instantiate(($"{name}.prefab"));
+        GameObject obj = Main.Resource.Instantiate($"{name}.prefab");
         obj.transform.SetParent(Root.transform);
         T popup = obj.GetOrAddComponent<T>();
         popups.Push(popup);

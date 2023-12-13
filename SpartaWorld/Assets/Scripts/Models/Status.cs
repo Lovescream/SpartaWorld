@@ -5,7 +5,9 @@ using UnityEngine;
 public class Status {
     private Dictionary<StatType, Stat> _stats;
 
-    public Stat this[StatType type] => _stats[type];
+    public Stat this[StatType type] {
+        get => _stats[type];
+    }
 
     public Status() {
         _stats = new();

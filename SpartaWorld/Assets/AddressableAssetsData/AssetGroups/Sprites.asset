@@ -10,27 +10,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Default Local Group
+  m_Name: Sprites
   m_EditorClassIdentifier: 
-  m_GroupName: Default Local Group
+  m_GroupName: Sprites
   m_Data:
     m_SerializedData: []
-  m_GUID: 8cb964e2a2e72bf499164e89844bc128
+  m_GUID: 269ace671e6a7c34198cb59ce4c5a1b1
   m_SerializeEntries:
-  - m_GUID: 4abfc276be8cda74dab05c8f7b1eaa22
-    m_Address: UI_MainScene.prefab
+  - m_GUID: 2b3af6f9d4e05514db285ab2e492c72e
+    m_Address: Icon_Damage.sprite
     m_ReadOnly: 0
     m_SerializedLabels:
     - PreLoad
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0789da9660a0e1546972140d6f7461d1
-    m_Address: UI_StatInfo.prefab
+  - m_GUID: 8c7b3c9ba39289940a67e977a1151f6a
+    m_Address: Icon_Critical.sprite
     m_ReadOnly: 0
     m_SerializedLabels:
     - PreLoad
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 58f92c1d2bea0814dbd4a8c433138b99
-    m_Address: UI_Drawer_Status.prefab
+  - m_GUID: 61042882e471ae04d919225143db1aad
+    m_Address: Icon_Defense.sprite
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 555c4e62efa04f54489dc4fd23fa51cf
+    m_Address: Icon_Hp.sprite
     m_ReadOnly: 0
     m_SerializedLabels:
     - PreLoad
@@ -39,5 +45,5 @@ MonoBehaviour:
   m_Settings: {fileID: 11400000, guid: 86e5718768efb3140b72c57f43621d01, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: 23757b2c7f931844295bfe2e186543c4, type: 2}
-    - {fileID: 11400000, guid: df641cf346436054ba6abcaaeaf19ddb, type: 2}
+    - {fileID: 11400000, guid: 9a3c0f515906f424ebb0607cff52d6a2, type: 2}
+    - {fileID: 11400000, guid: d0decbe59fa4e9e4d821e873706eac9b, type: 2}
