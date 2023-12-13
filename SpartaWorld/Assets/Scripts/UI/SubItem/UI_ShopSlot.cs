@@ -43,6 +43,10 @@ public class UI_ShopSlot : UI_Base {
     void OnEnable() {
         Initialize();
     }
+    void OnDisable() {
+        if (_playerInventory == null) return;
+        _playerInventory.OnGoldChanged -= RefreshButton;
+    }
     void OnDestroy() {
         if (_playerInventory == null) return;
         _playerInventory.OnGoldChanged -= RefreshButton;

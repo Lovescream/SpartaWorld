@@ -28,9 +28,13 @@ public class UI_StatInfo : UI_Base {
     void OnEnable() {
         Initialize();
     }
+    void OnDisable() {
+        if (_stat != null)
+            _stat.OnChanged -= SetValue;
+    }
     void OnDestroy() {
         if (_stat != null)
-        _stat.OnChanged -= SetValue;
+            _stat.OnChanged -= SetValue;
     }
 
     #endregion

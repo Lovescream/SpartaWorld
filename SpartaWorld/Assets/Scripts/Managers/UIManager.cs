@@ -180,7 +180,7 @@ public class UIManager {
 
     #region SubItem
 
-    public T CreateSubItem<T>(Transform parent = null, string name = null, bool pooling = true) where T : UI_Base {
+    public T CreateSubItem<T>(Transform parent = null, string name = null, bool pooling = false) where T : UI_Base {
         if (string.IsNullOrEmpty(name)) name = typeof(T).Name;
 
         GameObject obj = Main.Resource.Instantiate($"{name}.prefab", parent, pooling);

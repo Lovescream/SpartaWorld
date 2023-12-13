@@ -27,6 +27,10 @@ public class UI_ItemSlot : UI_Base {
     void OnEnable() {
         Initialize();
     }
+    void OnDisable() {
+        if (Inventory is PlayerInventory playerInventory)
+            playerInventory.OnEquipChanged -= RefreshEquip;
+    }
     void OnDestroy() {
         if (Inventory is PlayerInventory playerInventory)
             playerInventory.OnEquipChanged -= RefreshEquip;
