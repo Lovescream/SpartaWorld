@@ -1,0 +1,606 @@
+{
+  "items": [
+    {
+      "key": "Stick",
+      "type": 0,
+      "name": "막대기",
+      "description": "나무막대기이다.",
+      "cost": 10.0,
+      "modifiers": [
+        {
+          "Stat": 1,
+          "Type": 0,
+          "Value": 1.0
+        }
+      ]
+    },
+    {
+      "key": "StoneSword",
+      "type": 0,
+      "name": "돌검",
+      "description": "돌로 만든 검",
+      "cost": 100.0,
+      "modifiers": [
+        {
+          "Stat": 1,
+          "Type": 0,
+          "Value": 5.0
+        }
+      ]
+    },
+    {
+      "key": "StoneAxe",
+      "type": 1,
+      "name": "돌도끼",
+      "description": "돌로 만든 도끼",
+      "cost": 100.0,
+      "modifiers": [
+        {
+          "Stat": 1,
+          "Type": 0,
+          "Value": 5.0
+        }
+      ]
+    },
+    {
+      "key": "StoneHammer",
+      "type": 2,
+      "name": "돌망치",
+      "description": "돌로 만든 망치",
+      "cost": 100.0,
+      "modifiers": [
+        {
+          "Stat": 1,
+          "Type": 0,
+          "Value": 5.0
+        }
+      ]
+    },
+    {
+      "key": "StoneShield",
+      "type": 3,
+      "name": "돌방패",
+      "description": "돌로 만든 방패",
+      "cost": 100.0,
+      "modifiers": [
+        {
+          "Stat": 2,
+          "Type": 0,
+          "Value": 5.0
+        }
+      ]
+    },
+    {
+      "key": "StoneHelmet",
+      "type": 5,
+      "name": "돌머리",
+      "description": "멍청한 머리",
+      "cost": 100.0,
+      "modifiers": [
+        {
+          "Stat": 2,
+          "Type": 0,
+          "Value": 5.0
+        }
+      ]
+    },
+    {
+      "key": "StoneArmor",
+      "type": 6,
+      "name": "돌갑옷",
+      "description": "돌로 만든 갑옷",
+      "cost": 100.0,
+      "modifiers": [
+        {
+          "Stat": 0,
+          "Type": 0,
+          "Value": 20.0
+        }
+      ]
+    },
+    {
+      "key": "StoneBoots",
+      "type": 7,
+      "name": "돌부츠",
+      "description": "돌로 만든 신발",
+      "cost": 100.0,
+      "modifiers": [
+        {
+          "Stat": 3,
+          "Type": 0,
+          "Value": 5.0
+        }
+      ]
+    },
+    {
+      "key": "IronSword",
+      "type": 0,
+      "name": "철검",
+      "description": "철로 만든 검",
+      "cost": 800.0,
+      "modifiers": [
+        {
+          "Stat": 1,
+          "Type": 0,
+          "Value": 10.0
+        }
+      ]
+    },
+    {
+      "key": "IronAxe",
+      "type": 1,
+      "name": "철도끼",
+      "description": "철로 만든 도끼",
+      "cost": 800.0,
+      "modifiers": [
+        {
+          "Stat": 1,
+          "Type": 0,
+          "Value": 10.0
+        }
+      ]
+    },
+    {
+      "key": "IronHammer",
+      "type": 2,
+      "name": "철망치",
+      "description": "철로 만든 망치",
+      "cost": 800.0,
+      "modifiers": [
+        {
+          "Stat": 1,
+          "Type": 0,
+          "Value": 10.0
+        }
+      ]
+    },
+    {
+      "key": "IronShield",
+      "type": 3,
+      "name": "철방패",
+      "description": "철로 만든 방패",
+      "cost": 800.0,
+      "modifiers": [
+        {
+          "Stat": 2,
+          "Type": 0,
+          "Value": 10.0
+        }
+      ]
+    },
+    {
+      "key": "IronHelmet",
+      "type": 5,
+      "name": "철모자",
+      "description": "철로 만든 모자",
+      "cost": 800.0,
+      "modifiers": [
+        {
+          "Stat": 2,
+          "Type": 0,
+          "Value": 10.0
+        }
+      ]
+    },
+    {
+      "key": "IronArmor",
+      "type": 6,
+      "name": "철갑옷",
+      "description": "철로 만든 갑옷",
+      "cost": 800.0,
+      "modifiers": [
+        {
+          "Stat": 0,
+          "Type": 0,
+          "Value": 50.0
+        }
+      ]
+    },
+    {
+      "key": "IronBoots",
+      "type": 7,
+      "name": "철부츠",
+      "description": "철로 만든 부츠",
+      "cost": 800.0,
+      "modifiers": [
+        {
+          "Stat": 3,
+          "Type": 0,
+          "Value": 10.0
+        }
+      ]
+    },
+    {
+      "key": "SilverSword",
+      "type": 0,
+      "name": "은검",
+      "description": "은으로 만든 검",
+      "cost": 1313.0,
+      "modifiers": [
+        {
+          "Stat": 1,
+          "Type": 0,
+          "Value": 20.0
+        }
+      ]
+    },
+    {
+      "key": "SilverAxe",
+      "type": 1,
+      "name": "은도끼",
+      "description": "은으로 만든 도끼",
+      "cost": 1313.0,
+      "modifiers": [
+        {
+          "Stat": 1,
+          "Type": 0,
+          "Value": 20.0
+        }
+      ]
+    },
+    {
+      "key": "SilverHammer",
+      "type": 2,
+      "name": "은망치",
+      "description": "은으로 만든 망치",
+      "cost": 1313.0,
+      "modifiers": [
+        {
+          "Stat": 1,
+          "Type": 0,
+          "Value": 20.0
+        }
+      ]
+    },
+    {
+      "key": "SilverShield",
+      "type": 3,
+      "name": "은방패",
+      "description": "은으로 만든 방패",
+      "cost": 1313.0,
+      "modifiers": [
+        {
+          "Stat": 2,
+          "Type": 0,
+          "Value": 20.0
+        }
+      ]
+    },
+    {
+      "key": "SilverHelmet",
+      "type": 5,
+      "name": "은모자",
+      "description": "은으로 만든 모자",
+      "cost": 1313.0,
+      "modifiers": [
+        {
+          "Stat": 2,
+          "Type": 0,
+          "Value": 20.0
+        }
+      ]
+    },
+    {
+      "key": "SilverArmor",
+      "type": 6,
+      "name": "은갑옷",
+      "description": "은으로 만든 갑옷",
+      "cost": 1313.0,
+      "modifiers": [
+        {
+          "Stat": 0,
+          "Type": 0,
+          "Value": 100.0
+        }
+      ]
+    },
+    {
+      "key": "SilverBoots",
+      "type": 7,
+      "name": "은부츠",
+      "description": "은으로 만든 부츠",
+      "cost": 1313.0,
+      "modifiers": [
+        {
+          "Stat": 3,
+          "Type": 0,
+          "Value": 20.0
+        }
+      ]
+    },
+    {
+      "key": "GoldSword",
+      "type": 0,
+      "name": "금검",
+      "description": "금으로 만든 검",
+      "cost": 2890.0,
+      "modifiers": [
+        {
+          "Stat": 1,
+          "Type": 0,
+          "Value": 30.0
+        }
+      ]
+    },
+    {
+      "key": "GoldAxe",
+      "type": 1,
+      "name": "금도끼",
+      "description": "금으로 만든 도끼",
+      "cost": 2890.0,
+      "modifiers": [
+        {
+          "Stat": 1,
+          "Type": 0,
+          "Value": 30.0
+        }
+      ]
+    },
+    {
+      "key": "GoldHammer",
+      "type": 2,
+      "name": "금망치",
+      "description": "금으로 만든 망치",
+      "cost": 2890.0,
+      "modifiers": [
+        {
+          "Stat": 1,
+          "Type": 0,
+          "Value": 30.0
+        }
+      ]
+    },
+    {
+      "key": "GoldShield",
+      "type": 3,
+      "name": "금방패",
+      "description": "금으로 만든 방패",
+      "cost": 2890.0,
+      "modifiers": [
+        {
+          "Stat": 2,
+          "Type": 0,
+          "Value": 30.0
+        }
+      ]
+    },
+    {
+      "key": "GoldHelmet",
+      "type": 5,
+      "name": "금모자",
+      "description": "금으로 만든 모자",
+      "cost": 2890.0,
+      "modifiers": [
+        {
+          "Stat": 2,
+          "Type": 0,
+          "Value": 30.0
+        }
+      ]
+    },
+    {
+      "key": "GoldArmor",
+      "type": 6,
+      "name": "금갑옷",
+      "description": "금으로 만든 갑옷",
+      "cost": 2890.0,
+      "modifiers": [
+        {
+          "Stat": 0,
+          "Type": 0,
+          "Value": 200.0
+        }
+      ]
+    },
+    {
+      "key": "GoldBoots",
+      "type": 7,
+      "name": "금부츠",
+      "description": "금으로 만든 부츠",
+      "cost": 2890.0,
+      "modifiers": [
+        {
+          "Stat": 3,
+          "Type": 0,
+          "Value": 30.0
+        }
+      ]
+    },
+    {
+      "key": "DiamondSword",
+      "type": 0,
+      "name": "다이아몬드칼",
+      "description": "다이아몬드로 만든 검",
+      "cost": 4500.0,
+      "modifiers": [
+        {
+          "Stat": 1,
+          "Type": 0,
+          "Value": 55.0
+        }
+      ]
+    },
+    {
+      "key": "DiamondAxe",
+      "type": 1,
+      "name": "다이아몬드도끼",
+      "description": "다이아몬드로 만든 도끼",
+      "cost": 4500.0,
+      "modifiers": [
+        {
+          "Stat": 1,
+          "Type": 0,
+          "Value": 55.0
+        }
+      ]
+    },
+    {
+      "key": "DiamondHammer",
+      "type": 2,
+      "name": "다이아몬드망치",
+      "description": "다이아몬드로 만든 망치",
+      "cost": 4500.0,
+      "modifiers": [
+        {
+          "Stat": 1,
+          "Type": 0,
+          "Value": 55.0
+        }
+      ]
+    },
+    {
+      "key": "DiamondShield",
+      "type": 3,
+      "name": "다이아몬드방패",
+      "description": "다이아몬드로 만든 방패",
+      "cost": 4500.0,
+      "modifiers": [
+        {
+          "Stat": 2,
+          "Type": 0,
+          "Value": 55.0
+        }
+      ]
+    },
+    {
+      "key": "DiamondHelmet",
+      "type": 5,
+      "name": "다이아몬드헬멧",
+      "description": "다이아몬드로 만든 모자",
+      "cost": 4500.0,
+      "modifiers": [
+        {
+          "Stat": 2,
+          "Type": 0,
+          "Value": 55.0
+        }
+      ]
+    },
+    {
+      "key": "DiamondArmor",
+      "type": 6,
+      "name": "다이아몬드갑옷",
+      "description": "다이아몬드로 만든 갑옷",
+      "cost": 4500.0,
+      "modifiers": [
+        {
+          "Stat": 0,
+          "Type": 0,
+          "Value": 500.0
+        }
+      ]
+    },
+    {
+      "key": "DiamondBoots",
+      "type": 7,
+      "name": "다이아몬드부츠",
+      "description": "다이아몬드로 만든 부츠",
+      "cost": 4500.0,
+      "modifiers": [
+        {
+          "Stat": 3,
+          "Type": 0,
+          "Value": 50.0
+        }
+      ]
+    },
+    {
+      "key": "StarSword",
+      "type": 0,
+      "name": "별칼",
+      "description": "별로 만든 칼",
+      "cost": 8000.0,
+      "modifiers": [
+        {
+          "Stat": 1,
+          "Type": 0,
+          "Value": 100.0
+        }
+      ]
+    },
+    {
+      "key": "StarAxe",
+      "type": 1,
+      "name": "별도끼",
+      "description": "별로 만든 도끼",
+      "cost": 8000.0,
+      "modifiers": [
+        {
+          "Stat": 1,
+          "Type": 0,
+          "Value": 100.0
+        }
+      ]
+    },
+    {
+      "key": "StarHammer",
+      "type": 2,
+      "name": "별망치",
+      "description": "별로 만든 망치",
+      "cost": 8000.0,
+      "modifiers": [
+        {
+          "Stat": 1,
+          "Type": 0,
+          "Value": 100.0
+        }
+      ]
+    },
+    {
+      "key": "StarShield",
+      "type": 3,
+      "name": "별방패",
+      "description": "별로 만든 방패",
+      "cost": 8000.0,
+      "modifiers": [
+        {
+          "Stat": 2,
+          "Type": 0,
+          "Value": 100.0
+        }
+      ]
+    },
+    {
+      "key": "StarHelmet",
+      "type": 5,
+      "name": "별모자",
+      "description": "별로 만든 모자",
+      "cost": 8000.0,
+      "modifiers": [
+        {
+          "Stat": 2,
+          "Type": 0,
+          "Value": 100.0
+        }
+      ]
+    },
+    {
+      "key": "StarArmor",
+      "type": 6,
+      "name": "별갑옷",
+      "description": "별로 만든 갑옷",
+      "cost": 8000.0,
+      "modifiers": [
+        {
+          "Stat": 0,
+          "Type": 0,
+          "Value": 1000.0
+        }
+      ]
+    },
+    {
+      "key": "StarBoots",
+      "type": 7,
+      "name": "별부츠",
+      "description": "별로 만든 신발",
+      "cost": 8000.0,
+      "modifiers": [
+        {
+          "Stat": 3,
+          "Type": 0,
+          "Value": 100.0
+        }
+      ]
+    }
+  ]
+}

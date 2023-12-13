@@ -1,0 +1,40 @@
+{
+  "characters": [
+    {
+      "key": "Fighter",
+      "name": "파이터",
+      "description": "나는 짱 쎈 파이터이다",
+      "hp": 100.0,
+      "damage": 15.0,
+      "defense": 10.0,
+      "critical": 0.0
+    },
+    {
+      "key": "Rogue",
+      "name": "도적",
+      "description": "나는 짱 쎈 도적이다",
+      "hp": 80.0,
+      "damage": 19.0,
+      "defense": 5.0,
+      "critical": 0.0
+    },
+    {
+      "key": "Archer",
+      "name": "궁수",
+      "description": "나는 짱 쎈 궁수이다",
+      "hp": 90.0,
+      "damage": 18.0,
+      "defense": 4.0,
+      "critical": 0.0
+    },
+    {
+      "key": "Carrot",
+      "name": "당근",
+      "description": "바니바니 당근당근",
+      "hp": 200.0,
+      "damage": 60.0,
+      "defense": 200.0,
+      "critical": 50.0
+    }
+  ]
+}
