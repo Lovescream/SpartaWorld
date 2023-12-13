@@ -10,9 +10,10 @@ public class Item {
     public string Name => Data.name;
     public string Description => Data.description;
     public float Cost => Cost;
-    public List<StatModifier> Modifiers => Data.modifiers;
+    public List<StatModifier> Modifiers { get; private set; }
 
     public Item(ItemData data) {
         this.Data = data;
+        Modifiers = Data.modifiers.ConvertAll(x => x);
     }
 }

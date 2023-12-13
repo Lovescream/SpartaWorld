@@ -15,6 +15,17 @@ public class Status {
             _stats.Add((StatType)i, new Stat((StatType)i));
         }
     }
+
+    public void AddModifiers(List<StatModifier> modifiers) {
+        for (int i=0;i < modifiers.Count; i++) {
+            this[modifiers[i].Stat].AddModifier(modifiers[i]);
+        }
+    }
+    public void RemoveModifiers(List<StatModifier> modifiers) {
+        for (int i = 0; i < modifiers.Count; i++) {
+            this[modifiers[i].Stat].RemoveModifier(modifiers[i]);
+        }
+    }
 }
 
 public enum StatType {

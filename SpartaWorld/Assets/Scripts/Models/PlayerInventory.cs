@@ -46,12 +46,21 @@ public class PlayerInventory : Inventory {
                 _equips[ItemType.Boots] = item;
                 break;
         }
+
+        // TODO:: Find제거
+        GameObject.FindObjectOfType<MainScene>().Player.Status.AddModifiers(item.Modifiers);
+
         OnEquipChanged(item);
     }
     public void UnEquip(ItemType type) {
+        if (type == ItemType.Sword || type == ItemType.Axe || type == ItemType.Hammer) type = ItemType.WEAPON;
         if (!_equips.TryGetValue(type, out Item item)) return;
         if (item == null) return;
         _equips[type] = null;
+
+        // TODO:: Find제거
+        GameObject.FindObjectOfType<MainScene>().Player.Status.RemoveModifiers(item.Modifiers);
+
         OnEquipChanged(item);
     }
     

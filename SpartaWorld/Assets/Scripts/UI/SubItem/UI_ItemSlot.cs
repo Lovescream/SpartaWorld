@@ -40,6 +40,8 @@ public class UI_ItemSlot : UI_Base {
         BindImage(typeof(Images));
         BindObject(typeof(Objects));
 
+        GetImage((int)Images.imgItem).gameObject.BindEvent(OnClickItemSlot);
+
         return true;
     }
 
@@ -60,7 +62,14 @@ public class UI_ItemSlot : UI_Base {
     public void RefreshEquip(Item item) {
         if (Inventory == null || item == null) return;
         if (Inventory is not PlayerInventory playerInventory) return;
-        GetObject((int)Objects.Equip).SetActive(playerInventory.IsEquip(item));
+        if (Item == item)
+            GetObject((int)Objects.Equip).SetActive(playerInventory.IsEquip(item));
     }
     
+    private void OnClickItemSlot() {
+        if (Inventory is PlayerInventory) {
+            UI_Popup_EquipConfirm popup = Main.UI.ShowPopupUI<UI_Popup_EquipConfirm>();
+            popup.SetInfo(Inventory as PlayerInventory, Item);
+        }
+    }
 }
