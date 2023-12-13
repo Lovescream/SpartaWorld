@@ -42,7 +42,7 @@ public class UIManager {
 
         CanvasScaler scaler = obj.GetOrAddComponent<CanvasScaler>();
         scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
-        scaler.referenceResolution = new(1080, 1920);
+        scaler.referenceResolution = new(1920, 1080);
 
         obj.GetOrAddComponent<GraphicRaycaster>();
 

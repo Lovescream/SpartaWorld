@@ -1,18 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class Extension : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+public static class Extension {
+    public static T GetOrAddComponent<T>(this GameObject obj) where T : Component {
+        return Utilities.GetOrAddComponent<T>(obj);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public static void BindEvent(this GameObject go, Action action = null, Action<BaseEventData> dragAction = null, UIEvent type = UIEvent.Click) {
+        UI_Base.BindEvent(go, action, dragAction, type);
     }
 }
