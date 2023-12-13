@@ -28,11 +28,12 @@ public class DataTransformer : EditorWindow {
 
             loader.characters.Add(new() {
                 key = row[0],
-                description = row[1],
-                hp = ConvertValue<float>(row[2]),
-                damage = ConvertValue<float>(row[3]),
-                defense = ConvertValue<float>(row[4]),
-                critical = ConvertValue<float>(row[5]),
+                name = row[1],
+                description = row[2],
+                hp = ConvertValue<float>(row[3]),
+                damage = ConvertValue<float>(row[4]),
+                defense = ConvertValue<float>(row[5]),
+                critical = ConvertValue<float>(row[6]),
             });
         }
 
@@ -69,7 +70,7 @@ public class DataTransformer : EditorWindow {
             if (row.Length == 0 || string.IsNullOrEmpty(row[0])) continue;
 
             List<StatModifier> modifiers = new();
-            string[] modifierInfos = row[3].Split('|');
+            string[] modifierInfos = row[5].Split('|');
             for (int i=0;i<modifierInfos.Length;i++) {
                 string[] modifierInfo = modifierInfos[i].Split('_');
                 modifiers.Add(new StatModifier(ConvertValue<StatType>(modifierInfo[0]),
@@ -79,8 +80,10 @@ public class DataTransformer : EditorWindow {
 
             loader.items.Add(new() {
                 key = row[0],
-                description = row[1],
-                cost = ConvertValue<float>(row[2]),
+                type = ConvertValue<ItemType>(row[1]),
+                name = row[2],
+                description = row[3],
+                cost = ConvertValue<float>(row[4]),
                 modifiers = modifiers,
             });
         }

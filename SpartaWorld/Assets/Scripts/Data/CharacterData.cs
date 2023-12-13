@@ -7,6 +7,7 @@ using UnityEngine;
 [Serializable]
 public class CharacterData {
     public string key;
+    public string name;
     public string description;
     public float hp;
     public float damage;

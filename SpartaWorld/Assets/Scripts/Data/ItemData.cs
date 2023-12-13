@@ -6,6 +6,8 @@ using UnityEngine;
 [Serializable]
 public class ItemData {
     public string key;
+    public ItemType type;
+    public string name;
     public string description;
     public float cost;
     public List<StatModifier> modifiers;
@@ -21,4 +23,16 @@ public class ItemDataLoader:ILoader<string, ItemData> {
         }
         return dictionary;
     }
+}
+
+public enum ItemType {
+    Sword,
+    Axe,
+    Hammer,
+    Shield,
+    WEAPON,
+    Helmet,
+    Armor,
+    Boots,
+    ARMOR,
 }
