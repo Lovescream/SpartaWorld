@@ -60,5 +60,6 @@ public class Player {
         Inventory.Add(new Item(Main.Data.Items["Stick"]));
         Inventory.Add(new Item(Main.Data.Items["IronSword"]));
         Inventory.Add(new Item(Main.Data.Items["StarShield"]));
+        Inventory.Gold += 100000;
     }
 }

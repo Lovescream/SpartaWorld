@@ -114,7 +114,7 @@ public class UI_MainScene : UI_Scene {
         HideButtons();
     }
     private void OnBtnShop() {
-
+        Main.UI.ShowPopupUI<UI_Popup_Shop>();
     }
 
     #endregion

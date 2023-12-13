@@ -26,10 +26,12 @@ public class UIManager {
     #region Fields
 
     private int order = 10;
+    private int toastOrder = 500;
 
     private UI_Scene sceneUI;
 
     private Stack<UI_Popup> popups = new();
+    private List<UI_Toast> toasts = new();
     private List<UI_Drawer> drawers = new();
 
     // events.
@@ -37,7 +39,7 @@ public class UIManager {
 
     #endregion
 
-    public void SetCanvas(GameObject obj, bool sort = true, int sortOrder = 0) {
+    public void SetCanvas(GameObject obj, bool sort = true, int sortOrder = 0, bool isToast = false) {
         Canvas canvas = obj.GetOrAddComponent<Canvas>();
         canvas.renderMode = RenderMode.ScreenSpaceOverlay;
         canvas.overrideSorting = true;
@@ -54,6 +56,11 @@ public class UIManager {
         }
         else {
             canvas.sortingOrder = sortOrder;
+        }
+
+        if (isToast) {
+            toastOrder++;
+            canvas.sortingOrder = toastOrder;
         }
     }
 
@@ -150,6 +157,24 @@ public class UIManager {
     }
 
     public int GetPopupCount() => popups.Count;
+
+    #endregion
+
+    #region Toast
+
+    public UI_Toast ShowToast(string message) {
+        UI_Toast toast = Main.Resource.Instantiate($"UI_Toast.prefab", pooling: true).GetComponent<UI_Toast>();
+        toast.SetInfo(message);
+        toasts.Add(toast);
+        toast.transform.SetParent(Root.transform);
+        return toast;
+    }
+    public void CloseToast(UI_Toast toast) {
+        if (toasts.Count == 0) return;
+        toasts.Remove(toast);
+        Main.Resource.Destroy(toast.gameObject);
+        toastOrder--;
+    }
 
     #endregion
 

@@ -9,7 +9,7 @@ public class Item {
     public ItemType Type => Data.type;
     public string Name => Data.name;
     public string Description => Data.description;
-    public float Cost => Cost;
+    public float Cost => Data.cost;
     public List<StatModifier> Modifiers { get; private set; }
 
     public Item(ItemData data) {
