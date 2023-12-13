@@ -53,6 +53,24 @@ MonoBehaviour:
     m_SerializedLabels:
     - PreLoad
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 363783c2de0f0e548af98bd84b92804e
+    m_Address: UI_ShopSlot.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ad6dfaf28fe9ae34b904baa5505d4326
+    m_Address: UI_Popup_Shop.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 45262032e402bd94eb6501bdab41416e
+    m_Address: UI_Toast.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PreLoad
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 86e5718768efb3140b72c57f43621d01, type: 2}
   m_SchemaSet:
