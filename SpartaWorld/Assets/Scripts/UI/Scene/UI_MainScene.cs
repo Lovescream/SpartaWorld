@@ -109,8 +109,9 @@ public class UI_MainScene : UI_Scene {
         Main.UI.ShowDrawer<UI_Drawer_Status>();
         HideButtons();
     }
-    private void OnBtnInventory() { 
-
+    private void OnBtnInventory() {
+        Main.UI.ShowDrawer<UI_Drawer_Inventory>();
+        HideButtons();
     }
     private void OnBtnShop() {
 

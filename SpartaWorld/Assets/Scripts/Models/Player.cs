@@ -40,7 +40,7 @@ public class Player {
     public float ExpRatio => CurrentExp / RequiredExp;
 
     public Status Status { get; private set; } = new();
-    public Inventory Inventory { get; private set; }
+    public PlayerInventory Inventory { get; private set; }
 
     private float _exp;
 
@@ -57,5 +57,8 @@ public class Player {
         Status[StatType.Defense].SetValue(data.defense);
         Status[StatType.Critical].SetValue(data.critical);
         Inventory = new();
+        Inventory.Add(new Item(Main.Data.Items["Stick"]));
+        Inventory.Add(new Item(Main.Data.Items["IronSword"]));
+        Inventory.Add(new Item(Main.Data.Items["StarShield"]));
     }
 }

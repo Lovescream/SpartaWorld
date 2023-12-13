@@ -14,6 +14,8 @@ public class Inventory {
             OnGoldChanged?.Invoke(_gold);
         }
     }
+    public int Count => _items.Count;
+    public int MaxCount => 99;      // TODO:: NO HARDCODING
 
     #endregion
 
@@ -36,6 +38,11 @@ public class Inventory {
                 if (_items[i].Key == key) return _items[i];
             }
             return null;
+        }
+    }
+    public Item this[int index] {
+        get {
+            return _items[index];
         }
     }
 

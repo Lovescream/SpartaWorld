@@ -9,10 +9,12 @@ public class DataManager {
 
     public Dictionary<string, CharacterData> Characters = new();
     public Dictionary<int, LevelData> Levels = new();
+    public Dictionary<string, ItemData> Items = new();
 
     public void Initialize() {
         Characters = LoadJson<CharacterDataLoader, string, CharacterData>("CharacterData").MakeDictionary();
         Levels = LoadJson<LevelDataLoader, int, LevelData>("LevelData").MakeDictionary();
+        Items = LoadJson<ItemDataLoader, string, ItemData>("ItemData").MakeDictionary();
     }
 
 
